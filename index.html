@@ -1,0 +1,1060 @@
+<html>
+<HEAD>
+<TITLE>Вентиляция бассейна. Онлайн расчет системы вентиляции для помещений частных и общественных бассейнов.</TITLE>
+<META name="description" content="Калькулятор для онлайн расчета системы вентиляции помещения бассейна">
+<META name="keywords" content="калькулятор, расчет вентиляции бассейна">
+<META content=INDEX,FOLLOW name=ROBOTS>
+<META content=General name=rating>
+  <meta charset="utf-8" />
+<!--<LINK rel="canonical" href="#htm/indoor_pool_ventilation.htm">-->
+<LINK href="style_inp.css" rel="stylesheet" type="text/css">
+<LINK href="style_calc.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<!--<script type="text/javascript" src="http://ff.kis.v2.scr.kaspersky-labs.com/A60753DE-8486-0549-97FB-315BF230AD9E/main.js" charset="UTF-8"></script>-->
+<!--<link rel="stylesheet" crossorigin="anonymous" href="http://ff.kis.v2.scr.kaspersky-labs.com/E9DA032FB513-BF79-9450-6848-ED35706A/abn/main.css"/>-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<!--<script type="text/javascript" src="/help/loader.js"></script>-->
+<style>
+	@media print {
+		.noprint {display:none}
+	}
+	@media screen {
+		.noscreen {display:none}
+	}
+</style>
+<link href="./tmp/style_calc.css" rel="stylesheet" type="text/css">
+<link href="./tmp/style_inp.css" rel="stylesheet" type="text/css">
+</HEAD>
+<body onload="Init_Pool_Data()">
+
+</div>
+<table width="100%" cellspacing="0" cellpadding="0" border="0" class="tMain">
+  <tr >
+
+    <td id="cMain">
+      <span class="noprint">
+        <a name="top"></a>
+        <h1>Вентиляция бассейна. Онлайн расчет системы вентиляции бассейна.</h1>
+
+        <p >Системы вентиляции квартир и&nbsp;коттеджей, которые мы&nbsp;рассматривали в&nbsp;предыдущем разделе, предназначены для создания комфортного микроклимата. Если дома никого нет, то&nbsp;вентиляцию можно и&nbsp;отключить. С&nbsp;вентиляцией бассейна дело обстоит иначе: она не&nbsp;только создает комфорт, но&nbsp;и&nbsp;защищает отделку и&nbsp;элементы конструкций помещения от&nbsp;коррозии и&nbsp;плесени, которые могут возникнуть <nobr>из-за</nobr> избыточной влажности воздуха. Именно поэтому для бассейна всегда организуют отдельную систему вентиляции воздуха, которая работает в&nbsp;постоянном режиме, контролируя и&nbsp;поддерживая параметры воздуха на&nbsp;заданном уровне. Далее мы&nbsp;расскажем об&nbsp;основных параметрах воздушной среды помещения бассейна, а&nbsp;также об&nbsp;особенностях работы специализированных вентиляционных установок. </p>
+
+        <h2>Онлайн расчет вентиляции бассейна</h2>
+        <p>
+          С&nbsp;помощью калькулятора вы&nbsp;сможете сделать онлайн расчет вентиляции бассейна и получить данные для самостоятельного подбора вентиляционной системы. Калькулятор создан на&nbsp;основе рекомендаций <nobr><a href="http://www.climate-instructions.ru/dnl/abok_pool.pdf" target="_blank">АВОК 7.5&ndash;2012</a></nobr> &laquo;Обеспечение микроклимата и&nbsp;энергосбережение в&nbsp;крытых плавательных бассейнах. Нормы проектирования&raquo;. Значения, полученные по&nbsp;этой методике близки к&nbsp;значениям, рассчитанным по&nbsp;другой распространенной методике <nobr><a href="#tech/dehumidifiers_for_swimming_pools.pdf">VDI 2089</a>,</nobr> но&nbsp;в&nbsp;рекомендациях АВОК более точно учитывается влияние водных аттракционов.
+        </p>
+      </span>
+	    <link href="./tmp/vent-calc.css" rel="stylesheet" type="text/css">
+
+      <script type="text/javascript" src="./tmp/vent-calc-init.js"></script>
+      <script type="text/javascript" src="./tmp/calc-funcion-fs.js"></script>
+      <script type="text/javascript" src="./tmp/pool-bd-fs.js"></script>
+      <script type="text/javascript" src="./tmp/pool-calc-fs.js"></script>
+      <script type="text/javascript" src="./tmp/air-calc-fs.js"></script> 
+
+      <div class="wrap-hdr noprint" style="color:#0099CC;">
+        Калькулятор для расчета параметров вентиляции помещения бассейна
+      </div>
+      <div class="wrap-blk" id="pl-L4-1">
+        <div class="noscreen" style="color:#0099CC;" id="print_header">
+	        РФК Климат. Калькулятор для расчета вентиляции бассейна.
+        </div>
+
+        <div style="max-width: 750px;">
+        <FORM NAME="FormPool" ID="FormPool" METHOD=""  ACTION="" onclick="Read_Vars();" >
+
+
+          <table  border="0" cellspacing="0" cellpadding="0" id="tcalc" width="95%"
+            style="margin-top: 0px!important; border-color: #F0F0F0; border-style: solid; border-width: thin; border-width: 1px;">
+            <TR>
+              <td colspan="6" style="font-size:1%; padding:0px; margin 0px; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; border-top-width: 1px; background-color: #F6F6F6;">&nbsp;</td>
+            </tr>
+            <TR>
+              <td class="FORM" style="text-align: left; padding-left: 12px; background-color: #F6F6F6;" colspan="6">
+              <b>Задание параметров наружного воздуха</b></td>
+            </TR>
+            <tr>
+              <td colspan="6" style="font-size:1%; padding:0px; margin 0px; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; border-top-width: 1px;">&nbsp;</td>
+            </tr>
+          <!-- ========== Задание параметров наружного воздуха ========== -->
+          <TR>
+            <td class="FORM" style="text-align: left; padding-left: 7px;" colspan=3><label><input type="checkbox" id="pl_auto" checked  onClick="check_pl_auto()" onFocus = "proc_onfocus()" style="margin-bottom: 5px;">&nbsp;Автоввод параметров по населённому пункту</label><a class="help" href="#" id="hp_auto">&nbsp;</a></td>
+
+            <td style="text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+
+            <td style="text-align: left;"><div id="Sel_Text_Region">Регион</div></TD>
+            <td style="text-align: left;"><select  id="pl_region" onChange="check_pl_region()" onFocus = "proc_onfocus()" ></TD>
+          </TR>
+          <TR>
+            <td class="FORM" style="text-align: left; padding-left: 12px;">&nbsp;</td>
+            <td colspan=2 style="text-align: left; font-size:100%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+
+            <td style="text-align: left;">&nbsp;</TD>
+
+            <td style="text-align: left;"><div id="Sel_Text_City">Населенный пункт</div></TD>
+            <td style="text-align: left;"><select  id="pl_city" onChange="check_pl_city()" onFocus = "proc_onfocus()" ></TD>
+          </TR>
+
+          <tr>
+            <td colspan="6" style="font-size:1%; padding:0px; margin 0px; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; border-top-width: 1px;">&nbsp;</td>
+          </tr>
+
+          <TR>
+            <td class="FORM" style="text-align: left; padding-left: 12px;">Барометрическое давление, кПа</td>
+            <td colspan=2 style="text-align: left;"><input type=text style="padding-left: 3px;" maxlength=4 size=4 id="pl_press" value="" class="digit_dec"  onChange="" onFocus = "proc_onfocus()" ></TD>
+            <td style="text-align: left;">&nbsp;</TD>
+            <td style="text-align: left;">&nbsp;</TD>
+            <td style="text-align: left;">&nbsp;</TD>
+          </TR>
+
+          <TR>
+            <td class="FORM" style="text-align: left; padding-left: 12px; padding-top: 7px;" colspan=3><b>Теплый период года</b></td>
+            <td style="text-align: left;">&nbsp;</TD>
+            <td style="text-align: left;" colspan=2><b>Холодный период года</b></TD>
+          </TR>
+
+          <TR>
+            <td class="FORM" style="text-align: left; padding-left: 12px;" id="Text_avt_sm">Температура воздуха, &deg;С</TD>
+            <td colspan=2 style="text-align: left;"><input type=text style="padding-left: 3px;" maxlength=4 size=4 id="pl_avt_sm" value="" class="digit_dec"  onChange="" onFocus = "proc_onfocus()" ></TD>
+            <td style="text-align: left;">&nbsp;</TD>
+            <td style="text-align: left;"><nobr>Температура воздуха, &deg;С</nobr></TD>
+            <td style="text-align: left;"><input type=text style="padding-left: 3px;" maxlength=5 size=4 id="pl_avt_wn" value="" class="digit_int"  onChange="" onFocus = "proc_onfocus()" ></TD>
+          </TR>
+
+          <TR >
+            <td class="FORM" style="text-align: left; padding-left: 12px; " id="Text_partvpr_sm">Относит. влажность воздуха, %</td>
+            <td colspan=2 style="text-align: left;"><input type=text style="padding-left: 3px;" maxlength=4 size=4 id="pl_partvpr_sm" value="" class="digit_dec"  onChange="" onFocus = "proc_onfocus()" ></TD>
+            <td style="text-align: left;">&nbsp;</TD>
+            <td style="text-align: left;"><nobr>Относит. влажность воздуха, %</nobr></TD>
+            <td style="text-align: left;"><input type=text style="padding-left: 3px;" maxlength=3 size=4 id="pl_humout_wn" value="" class="digit_int"  onChange="" onFocus = "proc_onfocus()" ></TD>
+          </TR>
+
+          <tr>
+            <td colspan="6" style="font-size:1%; padding:0px; margin 0px;">&nbsp;</td>
+          </tr>
+
+
+          <TR>
+            <td colspan="6" style="font-size:1%; padding:0px; margin 0px; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; border-top-width: 1px; background-color: #F6F6F6;">&nbsp;</td>
+          </tr>
+          <TR>
+            <td class="FORM" style="text-align: left; padding-left: 12px; background-color: #F6F6F6;" colspan="6">
+            <b>Задание параметров помещения бассейна</b></td>
+          </TR>
+          <tr>
+            <td colspan="6" style="font-size:1%; padding:0px; margin 0px; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; border-top-width: 1px;">&nbsp;</td>
+          </tr>
+
+        	<!-- ========== Задание параметров помещения бассейна ========== -->
+
+        	<TR>
+        		<td class="FORM" style="text-align: left; padding-left: 7px; " colspan=3><label><input type="checkbox" id="pl_ainpar" checked  onClick="check_pl_ainpar()" style="margin-bottom: 5px;" onFocus = "proc_onfocus()" >&nbsp;Стандартные параметры воздуха и воды</label><a class="help" href="#" id="hp_stinpar">&nbsp;</a></TD>
+        		<td style="text-align: left;">&nbsp;</TD>
+        		<td style="text-align: left;"><nobr><div id="Sel_Text_Type">Тип бассейна</div></nobr></TD>
+        		<td style="text-align: left; padding-left: 2px;"><select  id="pl_type" onChange="calc_pl_type()"  onFocus = "proc_onfocus()"><a class="help" href="#" id="hp_pooltype" >&nbsp;</a>
+        	  <option value="0" selected>Частный&nbsp;&nbsp;
+        	  <option value="1">Обществ. глуб. < 1,35м
+        	  <option value="2">Обществ. глуб. > 1,35м
+        	  <option value="3">Аквапарк с горками
+        	  </select></TD>
+          </TR>
+
+        	<TR>
+        		<td class="FORM" style="text-align: left; padding-left: 12px;"><nobr>Т воздуха в помещении бассейна, &deg;С&nbsp;&nbsp;</nobr></TD>
+        		<td colspan=2 style="text-align: left;"><input type=text style="padding-left: 3px;" maxlength=4 size=4 id="pl_tair" value="30" class="digit_dec"  onChange="" onFocus = "proc_onfocus()" ></TD>
+        		<td style="text-align: left;">&nbsp;</TD>
+        		<td style="text-align: left;"><nobr>Площадь зеркала воды, м&sup2;</nobr></TD>
+        		<td style="text-align: left;"><input type=text style="padding-left: 3px;" maxlength=4 size=4 id="pl_swt" value="20" class="digit_dec"  onChange="" onFocus = "proc_onfocus()" ></TD>
+          </TR>
+
+        	<TR>
+        		<td class="FORM" style="text-align: left; padding-left: 12px;"><nobr>Т воды в бассейне, &deg;С</nobr></TD>
+        		<td colspan=2 style="text-align: left;"><input type=text style="padding-left: 3px;" maxlength=2 size=4 id="pl_twater" value="28" class="digit_dec"  onChange="" onFocus = "proc_onfocus()" ></TD>
+        		<td style="text-align: left;">&nbsp;</TD>
+        		<td style="text-align: left;"><nobr>Объем помещения бассейна, м&sup3;</nobr></TD>
+        		<td style="text-align: left;"><input type=text style="padding-left: 3px;" maxlength=5 size=4 id="pl_vhall" value="120" class="digit_dec"  onChange="" onFocus = "proc_onfocus()" ></TD>
+          </TR>
+
+        	<TR>
+        		<td class="FORM" style="text-align: left; padding-left: 12px;"><nobr>Отн. вл. в пом. в теплый период, %</nobr></TD>
+        		<td colspan=2 style="text-align: left;"><input type=text style="padding-left: 3px;" maxlength=3 size=4 id="pl_inhum_sm" value="55" class="digit_int"  onChange="" onFocus = "proc_onfocus()" ></TD>
+        		<td style="text-align: left;">&nbsp;</TD>
+        		<td style="text-align: left;"><label for="pl_cover"><nobr>Укрытие пов. воды в нераб. время</nobr></label></TD>
+        		<td style="text-align: left;"><input type="checkbox" id="pl_cover" checked  style="padding-left: 3px;" onFocus = "proc_onfocus()" ></TD>
+          </TR>
+
+        	<TR>
+        		<td class="FORM" style="text-align: left; padding-left: 12px;"><nobr>Отн. вл. в пом. в хол. период, %</nobr></TD>
+        		<td colspan=2 style="text-align: left;"><input type=text style="padding-left: 3px;" maxlength=3 size=4 id="pl_inhum_wn" value="45" class="digit_int"  onChange="" onFocus = "proc_onfocus()" ></TD>
+        		<td style="text-align: left;">&nbsp;</TD>
+        		<td style="text-align: left;"><nobr>Водные аттракционы<a class="help" href="#" id="hp_wattr">&nbsp;</a></nobr></TD>
+        		<td style="text-align: left; padding-left: 2px;"><select  id="pl_wattr" onFocus = "proc_onfocus()" ></select></TD>
+          </TR>
+
+        	<TR id="TR_AttrExp">
+        		<td class="FORM" style="text-align: left; padding-left: 12px;">&nbsp;</TD>
+        		<td colspan=2 style="text-align: left;">&nbsp;</TD>
+        		<td style="text-align: left;">&nbsp;</TD>
+        		<td style="text-align: left;"><nobr>Интенсивность использования аттр.</nobr></TD>
+        		<td style="text-align: left; padding-left: 2px;"><select  id="pl_attrexp" onChange="" onFocus = "proc_onfocus()" >
+        	  <option value="25" selected>10&ndash;20 минут в час
+        	  <option value="55">20&ndash;40 минут в час
+        	  <option value="75">40&ndash;50 минут в час
+        	  <option value="100">Непрерывная раб.
+        	  </select></TD>
+          </TR>
+
+        	<!--
+        	<td style="text-align: left;"><nobr>Режим работы бассейна, ч/сутки</nobr></TD>
+        		<td style="text-align: left; padding-left: 2px;"><input type=text style="padding-left: 3px;" maxlength=4 size=2 id="pl_pwork" value="5" class="digit_dec"  onChange="">
+        	</TD>
+
+        	<TR>
+        		<td class="FORM" style="text-align: left; padding-left: 12px;"></TD>
+        		<td colspan=2 style="text-align: left;"></TD>
+        		<td style="text-align: left;">&nbsp;</TD>
+        		<td style="text-align: left;"><nobr>Укрытие пов. воды в нераб. время</nobr></TD>
+        		<td style="text-align: left;"><input type="checkbox" id="pl_cover" checked  style="padding-left: 3px;"></TD>
+          </TR>
+        	-->
+
+        	<TR>
+        		<td class="FORM" style="text-align: left; padding-left: 12px; color:#FF9B00;" id="Text_Warn_PoolPar" colspan=3>&nbsp;</TD>
+        		<td style="text-align: left;">&nbsp;</TD>
+        		<td style="text-align: left;"><nobr>Кол-во посетителей<a class="help" href="#" id="hp_nswimm">&nbsp;</a></nobr></TD>
+        		<td style="text-align: left;"><input type=text style="padding-left: 3px;" maxlength=3 size=4 id="pl_nswim" value="3" class="digit_int"  onChange="" onFocus = "proc_onfocus()" ></TD>
+          </TR>
+
+        	<TR id="TR_NGuest">
+        		<td class="FORM" style="text-align: left; padding-left: 12px;">&nbsp;</TD>
+        		<td colspan=2 style="text-align: left;">&nbsp;</TD>
+        		<td style="text-align: left;">&nbsp;</TD>
+        		<td style="text-align: left;"><nobr><div id="Sel_Text_NGuest">Кол-во зрителей</div></nobr></TD>
+        		<td style="text-align: left;"><input type=text style="padding-left: 3px;" maxlength=3 size=4 id="pl_nguest" value="0" class="digit_int"  onChange="" onFocus = "proc_onfocus()" ></TD>
+          </TR>
+
+        	<TR id="TR_STrack">
+        		<td class="FORM" style="text-align: left; padding-left: 12px;">&nbsp;</TD>
+        		<td colspan=2 style="text-align: left;">&nbsp;</TD>
+        		<td style="text-align: left;">&nbsp;</TD>
+        		<td style="text-align: left;"><nobr><div id="Sel_Text_STrack">Площадь влажных обх. дорожек, м&sup2;</div></nobr></TD>
+        		<td style="text-align: left;"><input type=text style="padding-left: 3px;" maxlength=4 size=4 id="pl_strack" value="0" class="digit_dec"  onChange="" onFocus = "proc_onfocus()" ></TD>
+          </TR>
+
+        	<TR id="TR_SMount">
+        		<td class="FORM" style="text-align: left; padding-left: 12px;">&nbsp;</TD>
+        		<td colspan=2 style="text-align: left;">&nbsp;</TD>
+        		<td style="text-align: left;">&nbsp;</TD>
+        		<td style="text-align: left;"><nobr><div id="Sel_Text_SMount">Площадь потока откр. вод. горок, м&sup2;</div></nobr></TD>
+        		<td style="text-align: left;"><input type=text style="padding-left: 3px;" maxlength=3 size=4 id="pl_smount" value="0" class="digit_dec"  onChange="" onFocus = "proc_onfocus()" ></TD>
+          </TR>
+
+          <TR>
+        		<td colspan="6" style="padding:0px; margin 0px; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; border-top-width: 1px; ">&nbsp;</td>
+        	</tr>
+
+        	<TR>
+        		<td style="text-align: left; padding-left: 12px;" colspan=5><div id="Text_button" style="font-size:110%; color:#FF4B2B;">&nbsp;</div></TD>
+        		<td class="FORM" style="text-align: left; padding-left: 0px;" > <button type="button" id="button" onClick="calc_pool_main()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Рассчитать&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button> </TD>
+
+          </TR>
+
+
+
+        	<!-- ========== Результаты расчета влаговыделения ========== -->
+
+         	<tr>
+        		<td colspan="6" style="font-size:1%; padding:0px; margin 0px;">&nbsp;</td>
+        	</tr>
+        	<TR>
+        		<td colspan="6" style="font-size:1%; padding:0px; margin 0px; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; border-top-width: 1px; background-color: #F6F6F6;">&nbsp;</td>
+        	</tr>
+        	<TR>
+        	  <td class="FORM" style="text-align: left; padding-left: 12px; background-color: #F6F6F6;" colspan="6">
+        	    <h3 style="margin-top: 3px!important; margin-bottom: 3px!important;">Результаты расчета влаговыделения</h3>
+        	  </td>
+        	</TR>
+        	<TR>
+        		<td class="FORM" style="text-align: left; padding-left: 12px; padding-top: 2px; background-color: #F6F6F6;" colspan=3>
+      			<b>Теплый период года</b></td>
+      		  <td style="text-align: left; background-color: #F6F6F6;">&nbsp;</TD>
+      		  <td style="text-align: left; background-color: #F6F6F6;" colspan=2><b>Холодный период года</b></TD>
+          </TR>
+        	<TR>
+        		<td colspan="6" style="font-size:1%; padding:0px; margin 0px; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; border-top-width: 1px;">&nbsp;</td>
+        	</tr>
+
+        	<TR>
+        		 <td class="btext" style="vertical-align: bottom; text-align: left; padding-left: 12px;">
+        		   Влагосодерж. наружного воздуха
+             </td>
+        		 <td colspan=2 style="vertical-align : bottom; text-align: left; color:#999999; font-weight:bold; font-size:80%;">
+        		 <div id="pl_hcontout_sm">&nbsp;</div>	</TD>
+        		<td style="text-align: left;">&nbsp;</TD>
+        		<td style="text-align: left; vertical-align: bottom; padding-left: 2px;">
+        		  Влагосодерж. наружного воздуха
+            </td>
+        		<td style="text-align: left; vertical-align: bottom; color:#999999; font-weight:bold; font-size:80%;">
+        		  <div id="pl_hcontout_wn">&nbsp;</div>
+        	  </TD>
+        	</TR>
+          <TR>
+            <td class="btext" style="vertical-align: bottom; text-align: left; padding-left: 12px;">
+            Влагосодерж. воздуха в помещении</td>
+            <td colspan=2 style="vertical-align : bottom; text-align: left; color:#999999; font-weight:bold; font-size:80%;">
+            <div id="pl_hcontin_sm">&nbsp;</div>	</TD>
+            <td style="text-align: left;">&nbsp;</TD>
+            <td style="text-align: left; vertical-align: bottom; padding-left: 2px;">
+            Влагосодерж. воздуха в помещ.</td>
+            <td style="text-align: left; vertical-align: bottom; color:#999999; font-weight:bold; font-size:80%;">
+            <div id="pl_hcontin_wn">&nbsp;</div>
+            </TD>
+          </TR>
+
+          <TR>
+            <td colspan="6" style="font-size:1%; padding:0px; margin 0px; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; border-top-width: 1px;">&nbsp;</td>
+          </tr>
+
+          <TR>
+            <td class="btext" style="vertical-align: middle; text-align: left; padding-left: 12px;" colspan=3>
+              Влаговыделение с зеркала воды в рабочее время
+            </td>
+            <td style="text-align: left;">&nbsp;</TD>
+            <td style="text-align: left; " colspan=2>
+              Влаговыделение с зеркала воды в рабочее время
+            </td>
+          </TR>
+          <TR>
+            <td class="btext" style="vertical-align: bottom; text-align: left; padding-left: 30px;">
+              &ndash; по методике АВОК</td>
+            <td colspan=2 style="vertical-align : bottom; text-align: left; color:#669900; font-weight:bold; font-size:80%;">
+            <div id="pl_reshum0_sm">&nbsp;</div>	</TD>
+            <td style="text-align: left;">&nbsp;</TD>
+            <td style="text-align: left; vertical-align: bottom; padding-left: 20px;">
+            &ndash; по методике АВОК</td>
+            <td style="text-align: left; vertical-align: bottom; color:#669900; font-weight:bold; font-size:80%;">
+              <div id="pl_reshum0_wn">&nbsp;</div>
+            </TD>
+          </TR>
+          <TR>
+            <td class="btext" style="vertical-align: bottom; text-align: left; padding-left: 30px;">
+              &ndash; по форм. Бязина&ndash;Крумме</td>
+            <td colspan=2 style="vertical-align : bottom; text-align: left; color:#669900; font-weight:bold; font-size:80%;">
+              <div id="pl_reshum1_sm">&nbsp;</div>
+            </TD>
+            <td style="text-align: left;">&nbsp;</TD>
+            <td style="text-align: left; vertical-align: bottom; padding-left: 20px;">
+              &ndash; по форм. Бязина&ndash;Крумме</td>
+            <td style="text-align: left; vertical-align: bottom; color:#669900; font-weight:bold; font-size:80%;">
+              <div id="pl_reshum1_wn">&nbsp;</div>
+            </TD>
+          </TR>
+          <!--TR>
+          <td class="btext" style="vertical-align: bottom; text-align: left; padding-left: 30px;">
+          &ndash; реком. минимум 100 г/м&sup2;:</td>
+          <td colspan=2 style="vertical-align : bottom; text-align: left; color:#669900; font-weight:bold; font-size:80%;">
+          <div id="pl_reshum2_sm">&nbsp;</div>	</TD>
+          <td style="text-align: left;">&nbsp;</TD>
+          <td style="text-align: left; vertical-align: bottom; padding-left: 20px;">
+          &ndash; реком. минимум 100 г/м&sup2;:</td>
+          <td style="text-align: left; vertical-align: bottom; color:#669900; font-weight:bold; font-size:80%;">
+          <div id="pl_reshum2_wn">&nbsp;</div>
+          </TD>
+          </TR-->
+
+          <TR id="TR_ResTrSm">
+            <td class="btext" style="vertical-align: middle; text-align: left; padding-left: 12px; padding-top: 7px!important;">
+              <div id="Sel_Text_ResTrSm">Влаговыд. от обходн. дор. и горок</div></td>
+            <td colspan=2 style="vertical-align : bottom; text-align: left; color:#669900; font-weight:bold; font-size:80%;">
+              <div id="pl_reshumrd_sm">&nbsp;</div>
+            </TD>
+            <td style="text-align: left;">&nbsp;</TD>
+            <td style="text-align: left;  padding-top: 7px!important;"><div id="Sel_Text_ResTrWn">Влаговыд. от обх. дор. и горок</div></td>
+            <td style="text-align: left; vertical-align : bottom; color:#669900; font-weight:bold; font-size:80%;">
+              <div id="pl_reshumrd_wn">&nbsp;</div>
+            </TD>
+          </TR>
+
+          <TR>
+            <td colspan="6" style="font-size:1%; padding:0px; margin 0px; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; border-top-width: 1px;">
+              &nbsp;
+            </td>
+          </tr>
+
+          <TR>
+            <td class="btext" style="vertical-align: middle; text-align: left; padding-left: 12px; padding-top: 2px!important;">
+            <b>Макс. влаговыдел. в раб. время</b></td>
+            <td colspan=2 style="vertical-align : bottom; padding-bottom: 4px; text-align: left; color:#669900; font-weight:bold; font-size:90%;">
+            <div id="pl_reshumall_sm">&nbsp;</div>	</TD>
+            <td style="text-align: left;">&nbsp;</TD>
+            <td style="text-align: left; padding-top: 2px!important;"><b>Макс. влаговыдел. в раб. время</b></td>
+            <td style="vertical-align : bottom; padding-bottom: 4px; text-align: left; color:#669900; font-weight:bold; font-size:90%;">
+              <div id="pl_reshumall_wn">&nbsp;</div>
+            </TD>
+          </TR>
+          <TR>
+            <td class="btext" style="vertical-align: middle; text-align: left; padding-left: 12px; padding-top: 2px!important;">
+            <b>Средн. влаговыдел. в раб. время</b></td>
+            <td colspan=2 style="vertical-align : bottom; padding-bottom: 4px; text-align: left; color:#669900; font-weight:bold; font-size:90%;">
+              <div id="pl_reshumavr_sm">&nbsp;</div>
+            </TD>
+            <td style="text-align: left;">&nbsp;</TD>
+            <td style="text-align: left; padding-top: 2px!important;"><b>Средн. влаговыдел. в раб. вр.</b></td>
+            <td style="vertical-align : bottom; padding-bottom: 4px; text-align: left; color:#669900; font-weight:bold; font-size:90%;">
+              <div id="pl_reshumavr_wn">&nbsp;</div>
+            </TD>
+          </TR>
+          <TR>
+            <td class="btext" style="vertical-align: middle; text-align: left; padding-left: 12px; padding-top: 2px!important;">
+            Влаговыдел. в нерабочее время</td>
+            <td colspan=2 style="vertical-align : bottom; padding-bottom: 4px; text-align: left; color:#999999; font-weight:bold; font-size:90%;">
+            <div id="pl_reshumnw_sm">&nbsp;</div>	</TD>
+            <td style="text-align: left;">&nbsp;</TD>
+            <td style="text-align: left; padding-top: 2px!important;">Влаговыдел. в нерабочее время</td>
+            <td style="vertical-align : bottom; padding-bottom: 4px; text-align: left; color:#999999; font-weight:bold; font-size:90%;">
+              <div id="pl_reshumnw_wn">&nbsp;</div>
+            </TD>
+          </TR>
+
+
+          <!-- ========== Результаты расчета воздухообмена ========== -->
+
+          <tr>
+            <td colspan="6" style="font-size:1%; padding:0px; margin 0px;">&nbsp;</td>
+          </tr>
+          <TR>
+            <td colspan="6" style="font-size:1%; padding:0px; margin 0px; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; border-top-width: 1px; background-color: #F6F6F6;">&nbsp;</td>
+          </tr>
+          <TR>
+            <td class="FORM" style="text-align: left; padding-left: 12px; background-color: #F6F6F6;" colspan="6">
+              <h3 style="margin-top: 3px!important; margin-bottom: 3px!important;">Результаты расчета расхода наружного воздуха</h3>
+            </td>
+          </TR>
+          <TR >
+            <td class="FORM" style="text-align: left; padding-left: 12px; padding-top: 2px; background-color: #F6F6F6;" colspan=3>
+            <b>Теплый период года</b></td>
+            <td style="text-align: left; background-color: #F6F6F6;">&nbsp;</TD>
+            <td style="text-align: left; background-color: #F6F6F6; padding-top: 2px; " colspan=2><b>Холодный период года</b></TD>
+          </TR>
+          <TR >
+            <td colspan="6" style="font-size:1%; padding:0px; margin 0px; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; border-top-width: 1px;">&nbsp;</td>
+          </tr>
+
+          <!--TR>
+          	  <td class="btext" style="vertical-align: bottom; text-align: left; padding-left: 12px;">
+          	   Мин. расх. возд. (прит.+рецирк.)</td>
+          	 <td colspan=2 style="vertical-align : bottom; text-align: left; color:#669900; font-weight:bold; font-size:80%;">
+          	 <div id="pl_LComm_sm">&nbsp;</div>	</TD>
+          	<td style="text-align: left;">&nbsp;</TD>
+          	<td style="text-align: left; vertical-align: bottom; ">
+          	  Мин. расх. возд. (прит.+рецирк.)</td>
+          	<td style="text-align: left; vertical-align: bottom; color:#669900; font-weight:bold; font-size:80%;">
+          	<div id="pl_LComm_wn">&nbsp;</div>
+          	  </TD>
+          </TR>
+
+          <TR >
+          	  <td class="btext" style="vertical-align: middle; text-align: left; padding-left: 12px; padding-bottom: 7px; padding-top: 7px;" colspan=3>
+          	  Расход наружного (приточного) воздуха
+          	  </td>
+          	<td style="text-align: left;">&nbsp;</TD>
+          	<td style="text-align: left; padding-bottom: 7px; padding-top: 7px;" colspan=2>
+          	  Расход наружного (приточного) воздуха
+          	  </td>
+          </TR -->
+          <TR>
+            <td class="btext" style="vertical-align: bottom; text-align: left; padding-left: 30px;">
+              &ndash; для ассимиляции влаги</td>
+            <td colspan=2 style="vertical-align : bottom; text-align: left; color:#669900; font-weight:bold; font-size:80%;">
+            <div id="pl_resL0_sm">&nbsp;</div>	</TD>
+            <td style="text-align: left;">&nbsp;</TD>
+            <td style="text-align: left; vertical-align: bottom; padding-left: 20px;">
+              &ndash; для ассимиляции влаги</td>
+            <td style="text-align: left; vertical-align: bottom; color:#669900; font-weight:bold; font-size:80%;">
+            <div id="pl_resL0_wn">&nbsp;</div>
+            </TD>
+          </TR>
+          <TR>
+          <td class="btext" style="vertical-align: bottom; text-align: left; padding-left: 30px;">
+            &ndash; по санитарным нормам</td>
+          <td colspan=2 style="vertical-align : bottom; text-align: left; color:#669900; font-weight:bold; font-size:80%;">
+          <div id="pl_resL1_sm">&nbsp;</div>	</TD>
+          <td style="text-align: left;">&nbsp;</TD>
+          <td style="text-align: left; vertical-align: bottom; padding-left: 20px;">
+            &ndash; по санитарным нормам</td>
+          <td style="text-align: left; vertical-align: bottom; color:#669900; font-weight:bold; font-size:80%;">
+            <div id="pl_resL1_wn">&nbsp;</div>
+          </TD>
+          </TR>
+
+	<!-- TR>
+		<td colspan="6"
+			style="font-size:1%; padding:0px; margin 0px; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; border-top-width: 1px;">&nbsp;</td>
+	</tr>
+
+	<TR>
+		  <td class="btext" style="vertical-align: middle; text-align: left; padding-left: 12px;">
+		  	<b>Расход воздуха в теплый период</b></td>
+		 <td colspan=2 style="vertical-align : middle; text-align: left; color:#669900; font-weight:bold; font-size:90%;">
+		 <div id="pl_resLall_sm">&nbsp;</div>	</TD>
+		<td style="text-align: left;">&nbsp;</TD>
+		<td style="text-align: left; "><b>Расход воздуха в хол. период</b></td>		</TD>
+		<td style="vertical-align : middle; text-align: left; color:#669900; font-weight:bold; font-size:90%;">
+		<div id="pl_resLall_wn">&nbsp;</div></TD>
+		  </TD >
+	</TR >
+
+	<TR>
+		  <td class="btext" style="text-align: left; padding-left: 12px; padding-bottom: 9px;">
+		  	<b>Треб. мощность на нагрев возд.</b></td>
+		 <td colspan=2 style="vertical-align : bottom; text-align: left; color:#669900; font-weight:bold; font-size:90%; padding-bottom: 9px;">
+		 <div id="pl_airgy_sm">&nbsp;</div>	</TD>
+		<td style="text-align: left;">&nbsp;</TD>
+		<td style="text-align: left; padding-bottom: 9px;"><b>Треб. мощность на нагрев возд.</b></td>
+		<td style="vertical-align : bottom; text-align: left; color:#669900; font-weight:bold; font-size:90%; padding-bottom: 9px;">
+		<div id="pl_airgy_wn">&nbsp;</div>
+		</TD>
+	</TR -->
+
+	<TR>
+		<td colspan="6" style="font-size:1%; padding:0px; margin 0px; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; border-top-width: 1px; background-color: #F6F6F6;">&nbsp;</td>
+	</tr>
+
+	<TR>
+	<td class="FORM" style="text-align: left; padding-left: 12px; background-color: #F6F6F6;" colspan="6">
+	<h3 style="margin-top: 3px!important; margin-bottom: 3px!important;">Параметры вентиляционной установки с осушением воздуха ассимиляцией<a class="help" href="#" id="hp_ahuComm">&nbsp;</a></h3>
+	</td>
+	</TR>
+	<TR>
+		  <td class="btext" style="text-align: left; background-color: #F6F6F6; padding-left: 12px;" colspan=5 >
+		  	<div id="Sel_Text_ahuLComm">Общая производительность вентиляции (приток + рециркуляция)*</div></td>
+		<td style="vertical-align : bottom; text-align: left; background-color: #F6F6F6; color:#669900; font-weight:bold; font-size:90%; ">
+		<div id="pl_ahuLComm">&nbsp;</div></TD>
+	</TR>
+	<TR>
+		  <td class="btext" style="text-align: left; background-color: #F6F6F6; padding-left: 12px;" colspan=5 >
+		  	<div id="Sel_Text_ahuLInf">Регулируемый диапазон расхода наружного (приточного) воздуха (зима &ndash; лето)</div></td>
+		<td style="vertical-align : bottom; text-align: left; background-color: #F6F6F6; color:#669900; font-weight:bold; font-size:90%; ">
+		<div id="pl_ahuLInf">&nbsp;</div></TD>
+	</TR>
+	<TR>
+		  <td class="btext" style="text-align: left; background-color: #F6F6F6; padding-left: 12px; " colspan=5 >
+		  	<div id="Sel_Text_ahuPwr">Требуемая мощность калорифера (без учета рекуперации тепла)</div></td>
+		<td style="vertical-align : bottom; text-align: left; background-color: #F6F6F6; color:#669900; font-weight:bold; font-size:90%; ">
+		<div id="pl_ahuPwr">&nbsp;</div></TD>
+	</TR>
+	<TR id="TR_TooHot1">
+		  <td class="btext" style="text-align: left; background-color: #F6F6F6;  padding-left: 12px; font-weight:bold;" colspan=6 >
+		  	В теплый период года может потребоваться охлаждение приточного воздуха!</td>
+	</TR>
+	<TR id="TR_IsDewSM1">
+		  <td class="btext" style="text-align: left; background-color: #F6F6F6;  padding-left: 12px; font-weight:bold;" colspan=6 >
+		  	<div id="Text_DewSM1">Конденсация влаги в смесительной камере в зимний период</div>
+		  </td>
+	</TR>
+	<TR>
+		<td colspan="6" style="font-size:1%; padding:0px; margin 0px; background-color: #F6F6F6; padding-top: 0px; padding-bottom: 0px;">&nbsp;</td>
+	</tr>
+
+	<TR>
+		<td colspan="6" style="font-size:1%; padding:0px; margin 0px; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; border-top-width: 1px; background-color: #F6F6F6; ">&nbsp;</td>
+	</tr>
+
+	<TR>
+	<td class="FORM" style="text-align: left; padding-left: 12px; background-color: #F6F6F6;" colspan="6">
+	<h3 style="margin-top: 3px!important; margin-bottom: 3px!important;">Параметры вентиляционной установки с конденсационным осушителем воздуха <a class="help" href="#" id="hp_ahuComm2">&nbsp;</a></h3>
+	</td>
+	</TR>
+	<TR>
+		  <td class="btext" style="text-align: left; background-color: #F6F6F6;  padding-left: 12px; padding-bottom: 7px;" colspan=5 >
+		  	<div id="pl_hcomment0">&nbsp;</div>
+		  </td>
+		  <td style="background-color: #F6F6F6; " >&nbsp;</td>
+	</TR>
+	<TR>
+		  <td class="btext" style="text-align: left; background-color: #F6F6F6; padding-left: 12px;" colspan=5 >
+		  	<div id="Sel_Text_ahuHum">Производительность осушителя воздуха</div></td>
+		<td style="vertical-align : bottom; text-align: left; background-color: #F6F6F6; color:#669900; font-weight:bold; font-size:90%; ">
+		<div id="pl_ahuHum">&nbsp;</div></TD>
+	</TR>
+	<TR>
+		  <td class="btext" style="text-align: left; background-color: #F6F6F6; padding-left: 12px;" colspan=5 >
+		  	Расхода наружного (приточного) воздуха по санитарным нормам</td>
+		<td style="vertical-align : bottom; text-align: left; background-color: #F6F6F6; color:#669900; font-weight:bold; font-size:90%; ">
+		<div id="pl_ahuLInf2">&nbsp;</div></TD>
+	</TR>
+	<TR>
+		  <td class="btext" style="text-align: left; background-color: #F6F6F6; padding-left: 12px;" colspan=5 >
+		  	Требуемая мощность калорифера (без учета рекуперации тепла)</td>
+		<td style="vertical-align : bottom; text-align: left; background-color: #F6F6F6; color:#669900; font-weight:bold; font-size:90%; ">
+		<div id="pl_ahuPwr2">&nbsp;</div></TD>
+	</TR>
+	<!--TR>
+		  <td class="btext" style="text-align: left; background-color: #F6F6F6; padding-left: 12px;" colspan=5 >
+		  	Общая производительность вентиляции (приток + рециркуляция), не менее*</td>
+		<td style="vertical-align : bottom; text-align: left; background-color: #F6F6F6; color:#669900; font-weight:bold; font-size:90%; ">
+		<div id="pl_ahuLComm2">&nbsp;</div></TD>
+	</TR-->
+	<TR>
+		  <td class="btext" style="text-align: left; background-color: #F6F6F6;  padding-left: 12px; " colspan=6 >
+		  	<div id="pl_hcomment1">&nbsp;</div>
+			</td>
+	</TR>
+	<TR>
+		  <td class="btext" style="text-align: left; background-color: #F6F6F6;  padding-left: 12px; " colspan=6 >
+		  	<div id="pl_hcomment2">&nbsp;</div>
+			</td>
+	</TR>
+	<TR id="TR_TooHot2">
+		  <td class="btext" style="text-align: left; background-color: #F6F6F6;  padding-left: 12px; font-weight:bold;" colspan=6 >
+		  	В теплый период года может потребоваться охлаждение приточного воздуха!</td>
+	</TR>
+	<TR id="TR_IsDewSM2">
+		  <td class="btext" style="text-align: left; background-color: #F6F6F6;  padding-left: 12px; font-weight:bold;" colspan=6 >
+		  	<div id="Text_DewSM2">Конденсация влаги в смесительной камере в зимний период</div>
+		  </td>
+	</TR>
+
+	<TR>
+		<td colspan="6" style="font-size:1%; padding:0px; margin 0px; background-color: #F6F6F6; padding: 1px;">&nbsp;</td>
+	</tr>
+
+	<TR>
+		<td colspan="6" style="font-size:1%; padding:0px; margin 0px; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; border-top-width: 1px; background-color: #F6F6F6; ">&nbsp;</td>
+	</tr>
+	<TR>
+		  <td class="btext" style="text-align: left; background-color: #F6F6F6;  padding-left: 12px;" colspan=6 >
+		  		<p style="margin-bottom: 3px;">* Для обеспечения подвижности воздуха минимальный общий расход воздуха (приток + рециркуляция) <br>
+		  		&nbsp;&nbsp;рассчитывается исходя из&nbsp;кратности воздухообмена:</div>
+				<ul style="margin-top: 3px;">
+				<li><nobr>4-х</nobr> кратный при небольших теплопритоках (средняя площадь остекления и&nbsp;теплоизолированная кровля).</li>
+				<li><nobr>6-и</nobr> кратный при средних теплопритоках (большая площадь остекления и&nbsp;теплоизолированная кровля).</li>
+				<li><nobr>10-и</nobr> кратный при высоких теплопритоках (прозрачная кровля).</li>
+				</ul>
+		  </td>
+	</TR>
+
+	<TR>
+		<td colspan="6" style="font-size:1%; padding:0px; margin 0px; background-color: #F6F6F6; padding: 1px;">&nbsp;</td>
+	</tr>
+
+
+
+</table>
+
+<!--
+	<TR>
+		<td class="FORM" style="text-align: left; padding-left: 12px;"></td>
+		<td colspan=2 style="text-align: left;"></TD>
+
+		<td style="text-align: left;">&nbsp;</TD>
+
+		<td style="text-align: left;"></TD>
+		<td style="text-align: left;"></TD>
+    </TR>
+-->
+
+</FORM>
+<div class = "noprint">
+	<span  onclick="window.print();"  class="shparair"  style="margin-top:-5px ; font-size:100%;">Распечатать таблицу с расчетом</span>
+</div>
+
+</div>
+</div>
+
+	<script language="javascript">
+	<!--
+	$(".digit_int").keypress(function( b ){
+	    var C = /[+\-0-9\x25\x27\x24\x23]/;
+	    var a = b.which;
+	    var c = String.fromCharCode(a);
+	    return !!(a==0||a==8||a==9||a==13||c.match(C));
+	});
+
+	$(".digit_dec").keypress(function( b ){
+	    var C = /[.,0-9\x25\x27\x24\x23]/;
+	    var a = b.which;
+	    var c = String.fromCharCode(a);
+	    return !!(a==0||a==8||a==9||a==13||c.match(C));
+	});
+	-->
+	</script>
+
+<span class="noprint">
+
+
+
+	<div style="min-width: 750px; padding: 0px; margin: 0px;">&nbsp;</div>
+
+
+<br style="clear:both;">
+<h2 >Параметры воздушной среды</h2>
+
+<DIV class=bfeat>
+<img class="smico" src="./tmp/img/indoor_pool_ventilation.jpg" border="0" height="265" width="350"  alt="Воздухораспределители системы вентиляции  бассейна" title="Воздухораспределители системы вентиляции бассейна">
+</div>
+
+<p style="margin-bottom: 5px;">
+Система вентиляции должна поддерживать в&nbsp;помещении бассейна опредленные параметры воздушной среды:
+
+<ul style="margin-top: 5px;">
+<li><b>Температура.</b> От&nbsp;неё зависит не&nbsp;только комфорт людей, но&nbsp;и&nbsp;скорость испарения влаги с&nbsp;поверхности воды. Поэтому температура воздуха должна быть немного (на&nbsp;1&ndash;2&deg;С) выше температуры воды (если вода теплее воздуха, то&nbsp;испарение влаги значительно усиливается). Для частных бассейнов рекомендуемые значения температуры воздуха и&nbsp;воды составляют 30&deg;С&nbsp;и&nbsp;28&deg;С&nbsp;соответственно. Для нагрева приточного воздуха до&nbsp;заданной температуры в&nbsp;недорогих прямоточных системах используют водяные или электрические калориферы. В&nbsp;<nobr>приточно-вытяжных</nobr> установках для экономии энергии в&nbsp;дополнении к&nbsp;калориферу могут устанавливаться рекуператоры тепла выполненные, как правило, на&nbsp;базе пластинчатых рекуператоров и&nbsp;тепловых насосов (рекуператоры нагревают приточный воздух за&nbsp;счет тепла удаляемого воздуха). Если температура наружного воздуха может длительное время превышать температуру воздуха в&nbsp;помещении, то&nbsp;необходимо использовать вентиляционную систему с&nbsp;функцией охлаждения.</li>
+
+<li><b>Влажность.</b> Это один из&nbsp;наиболее важных параметров воздуха, который влияет на&nbsp;сохранность отделки и&nbsp;конструктивных элементов помещения бассейна. Если в&nbsp;течение длительного времени влажность воздуха будет превышать безопасный уровень, конструктивные элементы могут прийти в&nbsp;негодность&nbsp;&ndash; покрыться ржавчиной и&nbsp;плесенью <nobr>из-за</nobr> образования конденсата. Поэтому в&nbsp;нерабочее время для уменьшения испарения с&nbsp;зеркала воды рекомендуется закрывать поверхность бассейна пленкой. Заметим, что контролировать и&nbsp;управлять нужно относительной, а&nbsp;не&nbsp;абсолютной влажностью (влагосодержанием). Относительная влажность при неизменном влагосодержании сильно зависит от&nbsp;температуры, так снижение температуры на&nbsp;1&deg;С&nbsp;приводит к&nbsp;увеличению влажности на&nbsp;3,5%. Для уменьшения влажности воздуха используют два метода:
+<ul style="margin-top: 2px;">
+<li>Ассимиляцию влаги наружным воздухом, то&nbsp;есть подачу в&nbsp;помещение наружного воздуха с&nbsp;низким содержанием влаги и&nbsp;удаление из&nbsp;помещения влажного воздуха. Этот метод хорошо работает зимой при низком влагосодержании наружного воздуха. Летом в&nbsp;средней полосе России ассимиляция влаги наружным воздухом также возможна, но&nbsp;следует иметь в&nbsp;виду, что при жаркой и&nbsp;дождливой погоде влагосодержание наружного воздуха может быть выше, чем внутреннего, и&nbsp;тогда этот метод работать не&nbsp;будет.</li>
+<li>Конденсационное осушение на&nbsp;поверхности испарителя. На&nbsp;этом принципе работают <a href="#htm/dry.htm" target="_blank">осушители воздуха для бассейнов</a>. Осушитель воздуха может быть выполнен в&nbsp;виде отдельного агрегата или быть встроенным в&nbsp;вентиляционную установку.
+Заметим, что название осушитель для этого агрегата не&nbsp;совсем точное. Правильнее будет более общее название: <strong>холодильная машина</strong> или холодильный контур, поскольку этот агрегат не&nbsp;только снижает влажность воздуха, но&nbsp;и&nbsp;переносит тепло от&nbsp;удаляемого воздуха к&nbsp;приточному (тепловой насос), а&nbsp;при изменении направления движения хладагента может охлаждать приточный воздух.
+<!-- В&nbsp;холодное время года при конденсационном осушении затрачивается меньше энергии, чем при осушении ассимиляцией влаги. -->
+</li>
+</ul>
+Влажность в&nbsp;помещение бассейна должна поддерживаться на&nbsp;уровне 40&ndash;65%, при этом в&nbsp;теплый период года допускается более высокий уровень влажности, поскольку в&nbsp;помещении нет холодных поверхностей, на&nbsp;которых возможна конденсация влаги. Исходя из&nbsp;этого, рекомендуемые значения относительной влажности воздуха: летом до&nbsp;55%, зимой до&nbsp;45%.
+
+<li><b>Количество свежего воздуха</b>. Минимальный объем подаваемого свежего воздуха определяется санитарными нормами (80&nbsp;м&sup3;/ч на&nbsp;человека) и&nbsp;необходимостью ассимиляции влаги из&nbsp;воздуха (при отсутствии конденсационного осушителя воздуха). Летом объем подаваемого воздуха обычно выше, чем зимой, поскольку в&nbsp;теплый период разность влагосодержания внутреннего и&nbsp;наружного воздуха ниже.</li>
+<li><b>Соотношение приточного и&nbsp;вытяжного воздуха.</b> В&nbsp;помещении бассейна рекомендуется поддерживать незначительное разряжение (расход воздуха вытяжной системы должен быть на&nbsp;10&ndash;15% выше, чем приточной). Это предотвращает распространения влажного воздуха и&nbsp;запахов из&nbsp;бассейна по&nbsp;другим помещениям. </li>
+<li><b>Подвижность воздуха.</b> В&nbsp;отличие от&nbsp;жилых помещений, где вентиляция может быть на&nbsp;некоторое время отключена, в&nbsp;помещении бассейна должна обеспечиваться постоянная подвижность воздуха исходя из&nbsp;<nobr>6-и</nobr> кратного воздухообмена. Это связано с&nbsp;тем, что в&nbsp;неподвижном воздухе, даже при нормальной средней влажности, возле холодных поверхностей образуются застойные зоны, где температура опускается ниже точки росы и&nbsp;происходит выпадение конденсата. Чтобы избежать этого, воздух должен постоянно перемешиваться. Зимой для ассимиляции влаги обычно не&nbsp;требуется такое количество наружного воздуха, поэтому для обеспечения необходимой подвижности используют вентиляционную установку с&nbsp;камерой смешения (в&nbsp;ней наружный и&nbsp;внутренний воздух смешиваются в&nbsp;заданной пропорции и&nbsp;подаются в&nbsp;помещение). Отметим также, что при выборе расположения воздухораспределителей нужно учитывать, что поток воздуха должен проходить вдоль холодных поверхностей (обычно вертикально вдоль окон), но&nbsp;при этом в&nbsp;зоне купания не&nbsp;должно быть сквозняков, поскольку это не&nbsp;только создает дискомфорт для посетителей бассейна, но&nbsp;и&nbsp;существенно усиливает испарение влаги.</li>
+</ul>
+
+<p>Более подробно о&nbsp;параметрах воздушной среды и&nbsp;правилах проектирования систем вентиляции в&nbsp;помещении бассейна можно прочитать в&nbsp;уже упоминавшихся рекомендациях <nobr><a href="http://www.climate-instructions.ru/dnl/abok_pool.pdf" target="_blank">АВОК 7.5&ndash;2012</a>.</nobr></p>
+
+
+<h2>Выбор системы вентиляции бассейна</h2>
+
+<DIV class=bfeat>
+<img class="smico" src="./tmp/img/indoor_wood_pool_ventilation.jpg" border="0" height="250" width="350"  alt="Вентиляции помещения бассейна" title="Вентиляции помещения бассейна">
+</div>
+
+
+<p>Для вентиляции бассейна можно с&nbsp;успехом использовать вентиляционные установки различной комплектации, стоимость которых может отличаться в&nbsp;несколько раз. Самый простой и&nbsp;недорогой вариант&nbsp;&ndash; это обычная приточная установка и&nbsp;синхронизированный с&nbsp;ней по&nbsp;скорости вращения вытяжной вентилятор. Снижение влажности производится автономным осушителем воздуха (летом ассимиляция влаги наружным воздухом не&nbsp;всегда возможна). Недостатком такой системы является высокое энергопотребление, например, для бассейна с&nbsp;площадью зеркала воды 20&nbsp;м&sup2; потребуется приток воздуха на&nbsp;уровне 600&ndash;800&nbsp;м&sup3;/ч, что будет означать потребление около 13 кВт&middot;ч&nbsp;в&nbsp;зимний период. Снизить энергопотребление в&nbsp;несколько раз позволяют современные специализированные <nobr>приточно-вытяжные</nobr> установки, но&nbsp;такая система вентиляции обойдется дороже. Энергосбережение обеспечивают не&nbsp;только многоступенчатые системы рекуперации (несколько каскадов пластинчатого рекуператора + тепловой насос / осушитель воздуха), но&nbsp;и&nbsp;гибко изменяемые настройки системы в&nbsp;зависимости от&nbsp;параметров наружного воздуха и&nbsp;выбранного режима работы. Даже при относительно низких тарифах на&nbsp;газ и&nbsp;электроэнергию стоимость владения (начальные затраты + эксплуатация) современной <nobr>приточно-вытяжной</nobr> системой вентиляции скорее всего окажется ниже, чем недорогой прямоточной системой. Заметим, что стоимость вентиляционной установки может возрасти  <nobr>из-за</nobr> дополнительных функций, таких как охлаждение воздуха или нагрева воды в&nbsp;бассейне избыточным теплом, образующимся при работе холодильной машины в&nbsp;режиме осушения.</p>
+<p>
+Можно&nbsp;ли использовать для вентиляции бассейна обычные вентустановки? Если это приточная система, в&nbsp;которую поступает только наружный воздух, то&nbsp;особой разницы нет. Однако <nobr>приточно-вытяжные</nobr> установки и&nbsp;приточные установки с&nbsp;камерой смешения должны иметь антикоррозионную защиту теплообменников, поскольку транспортировка теплого и&nbsp;влажного воздуха может приводить к&nbsp;коррозии необработанных металлических поверхностей. Так, например, пластинчатый рекуператор должен быть выполнен из&nbsp;инертного материала типа полипропилена, если&nbsp;же применяется традиционный рекуператор из&nbsp;алюминия, то&nbsp;он, как и&nbsp;остальные теплообменники (водяной калорифер, испаритель, конденсатор) должен иметь специальную антикоррозийную защиту.</p>
+
+
+<h3>Режимы работы вентиляционной установки</h3>
+<p>В&nbsp;современных специализированных <nobr>приточно-вытяжных</nobr> установках с&nbsp;цифровой системой автоматики настройка всех режимов работы производится один раз при <nobr>пуско-наладке</nobr>. Пользователю в&nbsp;дальнейшем не&nbsp;нужно <nobr>что-либо</nobr> менять в&nbsp;настройках системы: для управления ему будет достаточно переключать рабочий и&nbsp;дежурный режим работы (это можно делать как с&nbsp;пульта, так и&nbsp;использовать для этих целей обычный выключатель).</p>
+<p>
+Если&nbsp;же для вентиляции бассейна применяется вентустановка с&nbsp;упрощенной системой автоматики или&nbsp;же модель, не&nbsp;предназначенная для этих целей, то&nbsp;пользователю придется самостоятельно управлять скоростью вентилятора и&nbsp;режимом работы калорифера, задавать влажность воздуха в&nbsp;зависимости сезона, менять другие настройки. И&nbsp;такая система вентиляции <nobr>из-за</nobr> неоптимальных настроек, скорее всего, не&nbsp;позволит поддерживать комфортный микроклимат при минимально возможном энергопотреблении.</p>
+<p style="margin-bottom: 5px;">
+Специализированные модели <nobr>приточно-вытяжных</nobr> установок для бассейнов работают в&nbsp;двух основных режимах:
+<ul style="margin-top: 5px;">
+<li><b>Рабочий режим</b> (может также называться Дневной режим). В&nbsp;этом режиме вентустановка работает во&nbsp;время эксплуатации бассейна, когда в&nbsp;помещении есть люди, при этом в&nbsp;помещение постоянно подается заданное количество наружного воздуха (не&nbsp;ниже санитарной нормы). Осушение может производиться как ассимиляцией влаги наружным воздухом, так и&nbsp;комбинированным способом (ассимиляция + конденсационное осушения воздуха). Во&nbsp;втором случае энергопотребление будет ниже. </li>
+<li><b>Дежурный режим</b> (может также называться Ночной режим). В&nbsp;этом режиме вентустановка работает при отсутствии в&nbsp;помещении людей. Наружный воздух в&nbsp;помещение не&nbsp;подается, вентустановка работает в&nbsp;режиме рециркуляции (это позволяет экономить энергию, не&nbsp;тратя её на&nbsp;нагрев наружного воздуха). Автоматика при этом постоянно контролирует влажность воздуха и&nbsp;при её повышении выше заданного уровня включает компрессор холодильного контура для конденсационного осушения (если в&nbsp;составе вентустановки есть осушитель), либо подает наружный воздух для ассимиляции влаги (если осушителя нет). Вентиляционная установка может иметь настраиваемый режим проветривания в&nbsp;Дежурном режиме&nbsp;&ndash; один раз в&nbsp;сутки в&nbsp;помещение ненадолго подается свежий воздух, чтобы там не&nbsp;накапливались неприятные запахи. </li>
+</ul>
+<p>
+Некоторые модели имеют <b>аварийный режим</b> работы. Если возникает неисправность встроенного или автономного осушителя, и&nbsp;влажность воздуха повышается выше критического уровня, подача наружного воздуха увеличивается для ассимиляции влаги.</p>
+<p>
+Более подробно с&nbsp;каждый режимом работы и&nbsp;особенностям оборудования вы&nbsp;можете ознакомиться в&nbsp;документации на&nbsp;сайтах производителей.</p>
+
+<!-- NEW -->
+
+<h3>Варианты технических решений для вентиляции бассейна</h3>
+<p>
+Выше мы&nbsp;уже кратко рассказали о&nbsp;различиях между обычными вентиляционными установками и&nbsp;специализированными моделями, предназначенными для организации вентиляции бассейна. Сейчас мы&nbsp;более подробно рассмотрим применяемые на&nbsp;практике технические решения на&nbsp;базе различного оборудования.</p>
+
+<h4>1.	Приточная и&nbsp;вытяжная установка, автономный осушитель воздуха.</h4>
+
+<DIV class=bfeatt style="float:left !important;">
+<img  src="./tmp/img/pool_ventilation_1.gif" border="0" height="297" width="491"  alt="Вентиляция бассейна: приточная и вытяжная установка, автономный осушитель воздуха">
+</div>
+
+<p style="clear:both;">
+Это один из&nbsp;наиболее простых и&nbsp;недорогих вариантов. Приточная и&nbsp;вытяжная установки поддерживают в&nbsp;помещении необходимый по&nbsp;санитарным нормам приток свежего воздуха, а&nbsp;также обеспечивают требуемое разряжение. Влажность воздуха поддерживается отдельным (автономным) настенным осушителем, который также создает необходимую подвижность воздуха: вентилятор осушителя работает непрерывно, а&nbsp;компрессор включается по&nbsp;команде от&nbsp;гигростата, когда влажность воздуха превышает заданное значение. В&nbsp;Дежурном режиме вентиляция не&nbsp;нужна и&nbsp;её следует отключать для экономии энергии.
+</p>
+<p>
+Если в&nbsp;регионе, где расположен бассейн, температура наружного воздуха может длительное время превышать температуру воздуха в&nbsp;помещении, то&nbsp;потребуется использовать приточную установку с&nbsp;фреоновым охладителем, работающую совместно с&nbsp;ККБ.
+</p>
+<p style="margin-bottom: 5px;">
+Достоинством рассмотренного варианта является только возможность использования распространенного неспециализированного оборудования. Недостатков&nbsp;же у&nbsp;него немало:
+<ul style="margin-top: 5px;">
+<li> Неудобное управление: задавать параметры нужно на&nbsp;двух независимых системах (вентиляции и&nbsp;осушителе).</li>
+<li> Настенный осушитель, расположенный в&nbsp;помещении бассейна, ухудшает дизайн помещения и&nbsp;издает сильный шум при работающем компрессоре. </li>
+<li>Проблемы с&nbsp;организацией равномерного распределения воздуха по&nbsp;помещению бассейна, ведь подвижность воздуха обеспечивается потоком, выходящим из&nbsp;одной точки (настенный осушитель не&nbsp;позволяет подключать к&nbsp;нему воздуховоды для распределения воздушного потока).</li>
+<li>Высокое энергопотребление <nobr>из-за</nobr> отсутствия рекуперации тепла.</li>
+</ul>
+
+<p>Необходимо отметить, что до&nbsp;появления настенных осушителей воздуха снижение влажности производилось только за&nbsp;счет ассимиляции влаги наружным воздухом: в&nbsp;бассейнах применялась описываемая здесь система, только без осушителя. Серьезным недостатком такой системы являлась необходимость обеспечения подвижности воздуха приточным воздухом, что приводило к&nbsp;колоссальным потерям энергии в&nbsp;холодный период года. Если&nbsp;же снизить производительность приточной установки до&nbsp;санитарной нормы, то&nbsp;велик риск появления конденсата на&nbsp;окнах и&nbsp;в&nbsp;углах помещения, где воздух плохо перемешивается. Ниже, в&nbsp;таблице с&nbsp;результатами расчетов энергопотребления, вариант без осушителя приведен под номером 0 для демонстрации экономической нецелесообразности подобного решения.
+</p>
+<p>
+Можно&nbsp;ли обойтись без дорогостоящего осушителя, если климатические условия позволяют ассимилировать влагу приточным воздухом? Да, для этого достаточно использовать приточную установку с&nbsp;камерой смешения, как в&nbsp;следующем варианте.</p>
+
+<h4>2.	Приточная установка с&nbsp;камерой смешения, вытяжная установка, автономный осушитель воздуха.</h4>
+
+<DIV class=bfeatt style="float:left !important;">
+<img  src="./tmp/img/pool_ventilation_3.gif" border="0" height="298" width="543"  alt="Вентиляция бассейна: приточная установка с камерой смешения, вытяжная установка, автономный осушитель воздуха">
+</div>
+
+<p style="clear:both;">
+Если оснастить приточную установку камерой смешения, где в&nbsp;заданной пропорции будут смешиваться наружный и&nbsp;рециркуляционный воздух, то&nbsp;требуемая подвижность воздуха может быть обеспечена системой вентиляции, а&nbsp;осушитель будет нужен только для снижения влажности воздуха в&nbsp;летний период, когда влагосодержание наружного воздуха становится слишком высоким. Так мы&nbsp;избавились от проблемы  с&nbsp;равномерным распределением воздуха: смесь приточного и&nbsp;рециркуляционного воздуха подается через распределители, расположенные по&nbsp;всему помещению.</p>
+<p>Если в&nbsp;регионе, где расположен бассейн, не&nbsp;бывает периодов (или&nbsp;же они очень непродолжительны), когда высокое влагосодержание наружного воздуха не&nbsp;позволяет снижать влажность воздуха ассимиляцией, то&nbsp;осушитель воздуха можно не&nbsp;устанавливать. Это позволит существенно снизить общую стоимость системы. А&nbsp;в&nbsp;те&nbsp;дни, когда на&nbsp;улице слишком жарко и&nbsp;влажно просто не&nbsp;следует пользоваться бассейном (поверхность воды при это должна быть укрыта пленкой для снижения испарения влаги).</p>
+
+<h4>3.	Канальный осушитель воздуха с&nbsp;подмесом наружного воздуха, вытяжная установка.</h4>
+
+<DIV class=bfeatt style="float:left !important;">
+<img  src="./tmp/img/pool_ventilation_4.gif" border="0" height="298" width="523"  alt="Вентиляция бассейна: канальный осушитель воздуха с подмесом наружного воздуха, вытяжная установка">
+</div>
+
+<p style="clear:both;">
+Причиной большинства недостатков первых двух вариантов было использование автономного осушителя воздуха. Если вместо него установить канальный осушитель с&nbsp;калорифером и&nbsp;возможностью подмеса наружного воздуха, то&nbsp;от&nbsp;приточной установки можно будет отказаться: вся обработка приточного воздуха будет происходить в&nbsp;канальном осушителе. Этот вариант уже можно рекомендовать для применения в&nbsp;небольших частных бассейнах, поскольку по&nbsp;стоимости он&nbsp;примерно такой&nbsp;же, как и&nbsp;первые два варианта, но&nbsp;при этом лишен всех их&nbsp;недостатков, кроме высокого энергопотребления, которое остается точно таким&nbsp;же. Действительно, управление всей системой производится с&nbsp;одного пульта, а&nbsp;шум от&nbsp;оборудования будет не&nbsp;слышен, если расположить осушитель в&nbsp;отдельном помещении.</p>
+
+<h4>4.	ПВУ с&nbsp;осушителем / тепловым насосом.</h4>
+
+<DIV class=bfeatt style="float:left !important;">
+<img  src="./tmp/img/pool_ventilation_5.gif" border="0" height="282" width="540"  alt="Вентиляция бассейна: ПВУ с осушителем / тепловым насосом">
+</div>
+
+<p style="clear:both;">
+Если объединить канальный осушитель из&nbsp;предыдущего варианта с&nbsp;вытяжной установкой, то&nbsp;мы&nbsp;получим <nobr>приточно-вытяжную</nobr> установку с&nbsp;осушителем, который может работать как тепловой насос, давая примерно <nobr>3-х</nobr> кратный выигрыш в&nbsp;потреблении энергии. Такая возможность появляется при размещении конденсатора осушителя в&nbsp;вытяжном канале, а&nbsp;испарителя&nbsp;&ndash; в&nbsp;приточном. Поток теплого воздуха нагревает конденсатор, компрессор переносит тепло в&nbsp;испаритель, который нагревает приточный воздух. Осушение при этом <nobr>по-прежнему</nobr> работает: при охлаждении влажного воздуха на&nbsp;испарителе происходит конденсация влаги (более подробно о&nbsp;работе холодильной машины можно прочитать в&nbsp;разделе <a href="#htm/con_wk.htm">Принцип работы кондиционера</a>)</p>
+
+<p>Другое важное преимущество&nbsp;&ndash; использование одного агрегата для обработки как приточного, так и&nbsp;вытяжного потока. Это не&nbsp;только упрощает балансировку скоростей приточного и&nbsp;вытяжного вентиляторов для поддержания требуемого разряжения, но&nbsp;и&nbsp;позволяет гибко менять режимы работы всех компонентов для достижения максимального комфорта и&nbsp;энергоэффективности. В&nbsp;ПВУ обычно реализуется возможность сценарного управления, когда переключение режимов работы производится по&nbsp;таймеру, поддерживаются режимы Проветривания, каскадного регулирования и&nbsp;другие. Кроме этого, опционально возможно использование холодильной машины для охлаждения приточного воздуха.</p>
+
+<h4>5.	ПВУ с&nbsp;рекуператором и&nbsp;осушителем / тепловым насосом.</h4>
+
+<DIV class=bfeatt style="float:left !important;">
+<img  src="./tmp/img/pool_ventilation_6.gif" border="0" height="282" width="673"  alt="Вентиляция бассейна: ПВУ с рекуператором и осушителем / тепловым насосом">
+</div>
+
+<p style="clear:both;">
+Предыдущий вариант почти идеален, но&nbsp;для нагрева воздуха используется тепловой насос, которому для работы нужна электроэнергия. А&nbsp;в&nbsp;большинстве регионов России обогреваться газом в&nbsp;несколько раз выгоднее, чем электричеством. Если для получения некоторого количества тепла при использовании газового котла нужно заплатить в&nbsp;3 раза меньше, чем при использовании электрического калорифера, то&nbsp;преимущество теплового насоса теряется и&nbsp;нагревать воздух становиться экономически выгоднее водяным калорифером (тепловой насос вырабатывает тепла примерно в&nbsp;3 раза больше, чем потребляет электроэнергии). В&nbsp;этом случае мы&nbsp;рекомендуем использовать ПВУ с&nbsp;пластинчатым рекуператором, который экономит тепло и&nbsp;не&nbsp;потребляет электроэнергию. А&nbsp;компрессор осушителя включается только когда нужно снизить влажность воздуха.</p>
+
+<p>Подобные ПВУ обычно комплектуются всеми необходимыми датчиками для контроля состояния окружающей среды, что позволяет им&nbsp;максимально эффективно поддерживать заданные параметры воздуха. В&nbsp;рамках этого обзора мы&nbsp;не&nbsp;можем подробно рассказать обо всех возможностях ПВУ для бассейнов, но&nbsp;эта информация есть в&nbsp;документации на&nbsp;сайтах производителей.</p>
+
+<h4>Итоговая таблица с&nbsp;преимуществами и&nbsp;недостатками различных технических решений</h4>
+<table border="0" width="100%" id="tprodm" cellspacing="0" cellpadding="0">
+  <tr class="phead">
+    <td>№</td>
+    <td>Техническое решение</td>
+    <td>Шум</td>
+    <td>Дизайн</td>
+    <td>Распр. возд.</td>
+    <td>Охлажд. прит. воздуха</td>
+    <td>Баланс прит. / выт.</td>
+    <td>Энерго-эффект.</td>
+    <td>Особенности</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>Прямоточная ПУ, ВУ <br>(без осушителя)</td>
+    <td class="smile_fine">&nbsp;</td>
+    <td class="smile_fine">&nbsp;</td>
+    <td class="smile_fine">&nbsp;</td>
+    <td class="smile_sad">&nbsp;</td>
+    <td class="smile_sad">&nbsp;</td>
+    <td class="smile_sad">&nbsp;</td>
+    <td>Риск выпадения конденсата на окнах, высокое энергопотребление</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Прямоточная ПУ, ВУ, автономный осушитель</td>
+    <td class="smile_sad">&nbsp;</td>
+    <td class="smile_sad">&nbsp;</td>
+    <td class="smile_sad">&nbsp;</td>
+    <td class="smile_sad">&nbsp;</td>
+    <td class="smile_sad">&nbsp;</td>
+    <td class="smile_neutral">&nbsp;</td>
+    <td>Шум от осушителя, сложность в управл., воздухообмен обеспеч. осушитель</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>ПУ с камерой смешения, ВУ, автономный осушитель</td>
+    <td class="smile_sad">&nbsp;</td>
+    <td class="smile_sad">&nbsp;</td>
+    <td class="smile_fine">&nbsp;</td>
+    <td class="smile_sad">&nbsp;</td>
+    <td class="smile_sad">&nbsp;</td>
+    <td class="smile_neutral">&nbsp;</td>
+    <td>Шум от осушителя, сложность в управлении</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Канальный осушитель с подмесом наруж. возд., ВУ</td>
+    <td class="smile_fine">&nbsp;</td>
+    <td class="smile_fine">&nbsp;</td>
+    <td class="smile_fine">&nbsp;</td>
+    <td class="smile_sad">&nbsp;</td>
+    <td class="smile_sad">&nbsp;</td>
+    <td class="smile_neutral">&nbsp;</td>
+    <td>Недорогое решение для частного бассейна</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>ПВУ с осушителем</td>
+    <td class="smile_fine">&nbsp;</td>
+    <td class="smile_fine">&nbsp;</td>
+    <td class="smile_fine">&nbsp;</td>
+    <td class="smile_fine">&nbsp;</td>
+    <td class="smile_fine">&nbsp;</td>
+    <td class="smile_fine">&nbsp;</td>
+    <td>Сбалансированное решение для бассейна любого размера</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>ПВУ с осушителем и рекуператором</td>
+    <td class="smile_fine">&nbsp;</td>
+    <td class="smile_fine">&nbsp;</td>
+    <td class="smile_fine">&nbsp;</td>
+    <td class="smile_fine">&nbsp;</td>
+    <td class="smile_fine">&nbsp;</td>
+    <td style="float: center; text-align:center;"><nobr><img src="../img/sm0.gif" width="19" height="19">&nbsp;<img src="../img/sm0.gif" width="19" height="19"></nobr></td>
+    <td >Энергоэффективное решение для бассейна любого размера</td>
+  </tr>
+</table>
+</p>
+
+<h3>Расчет энергопотребления различных технических решений</h3>
+<p>
+При описании всех вариантов мы&nbsp;говорили об&nbsp;энергоэффективности&nbsp;&ndash; одном из&nbsp;важнейших показателей системы вентиляции бассейна. Для наглядности мы&nbsp;определили энергопотребление для каждого варианта в&nbsp;зимний период на&nbsp;примере небольшого частного  бассейна с&nbsp;площадью зеркала воды 14&nbsp;м&sup2; и&nbsp;свели эти данные в&nbsp;таблицу. Мы&nbsp;рассчитали требуемую мощность для нагрева наружного воздуха до&nbsp;заданной температуры, а&nbsp;также полную мощность, которая включает мощность системы отопления бассейна (полная мощность определяется по&nbsp;температуре и&nbsp;влажности удаляемого воздуха). Разница между этими двумя параметрами объясняется тем, что подаваемый воздух имеет практически нулевое влагосодержание, поэтому сначала (внутри вентустановки) энергия расходуется на&nbsp;нагрев сухого воздуха, а&nbsp;затем&nbsp;&ndash; на&nbsp;его увлажнение в&nbsp;процессе испарения воды из&nbsp;бассейна (энергия поступает из&nbsp;системы подогрева воды и&nbsp;отопления). Заметим, что обычно вентиляция работает в&nbsp;режиме поддержания заданной температуры на&nbsp;выходе приточного канала (для этого варианта и&nbsp;проводились расчеты). Однако система вентиляции может выполнять функцию отопления и&nbsp;работать в&nbsp;режиме поддержания заданной температуры в&nbsp;помещении (режим каскадного регулирования), тогда расходуемая мощность для нагрева будет выше, чем указано в&nbsp;таблице, но&nbsp;полная мощность не&nbsp;изменится. В&nbsp;таблице также приводится полная мощность для дежурного режима, когда бассейн не&nbsp;эксплуатируется.
+</p>
+<p style="margin-bottom: 5px;">Итак, исходные данные:
+<ul style="margin-top: 5px;">
+<li>Расход воздуха для организации необходимой подвижности воздуха: 700&nbsp;м&sup3;/ч. </li>
+<li>Расход воздуха по&nbsp;санитарным нормам (2 человека): 160&nbsp;м&sup3;/ч. </li>
+<li>Требуемая производительность осушителя: 2 кг/ч.</li>
+<li>Температура и&nbsp;влажность воздуха внутри помещения: 30&deg;С&nbsp;и&nbsp;45%. </li>
+<li>Температура и&nbsp;влажность наружного воздуха (для Москвы): -28&deg;С&nbsp;и&nbsp;84%.</li>
+<li>Поверхность воды укрывается пленкой, когда бассейн не&nbsp;эксплуатируется.</li>
+</ul>
+
+<p>Таблица с&nbsp;результатми расчета требуемой мощности для различных технических решений<br />
+<table border="0" width="100%" id="tprodm" cellspacing="0" cellpadding="0">
+  <tr class="phead">
+  	<td>№</td>
+    <td>Техническое&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; решение</td>
+    <td>Общий воздухо-обмен</td>
+    <td>Расход наружного воздуха</td>
+    <td>Тепловая мощн. вентуст.</td>
+    <td>Расход вытяж. воздуха</td>
+    <td>Т / &phi; вытяж. воздуха</td>
+    <td>Полная тепловая мощн.</td>
+    <td>Возможн. дежурн. режима</td>
+    <td>Мощность в дежурн. реж.</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>Прямоточная ПУ, ВУ</td>
+    <td><nobr>700 м&sup3;/ч</nobr></td>
+    <td><nobr>900 м&sup3;/ч</nobr></td>
+    <td><nobr>12.3 кВт</nobr></td>
+    <td><nobr>800 м&sup3;/ч</nobr></td>
+    <td><nobr>30°С/45%</nobr></td>
+    <td><nobr>24.2 кВт</nobr></td>
+    <td class="smile_sad">&nbsp;</td>
+    <td><nobr>24.2 кВт</nobr></td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Прямоточная ПУ, ВУ, осушитель</td>
+    <td>700 м&sup3;/ч (осушит.)</td>
+    <td>160 м&sup3;/ч</td>
+    <td>3.1 кВт</td>
+    <td>180 м&sup3;/ч</td>
+    <td>30°С/45%</td>
+    <td>5.4 кВт</td>
+    <td class="smile_neutral">&nbsp;</td>
+    <td>0.3 кВт</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>ПУ с камерой смешения, ВУ, осушитель</td>
+    <td>700 м&sup3;/ч</td>
+    <td>160 м&sup3;/ч</td>
+    <td>3.1 кВт</td>
+    <td>180 м&sup3;/ч</td>
+    <td>30°С/45%</td>
+    <td>5.4 кВт</td>
+    <td class="smile_neutral">&nbsp;</td>
+    <td>0.3 кВт</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Канальный осушитель с подмесом наруж. возд., ВУ</td>
+    <td>700 м&sup3;/ч</td>
+    <td>160 м&sup3;/ч</td>
+    <td>3.1 кВт</td>
+    <td>180 м&sup3;/ч</td>
+    <td>30°С/45%</td>
+    <td>5.4 кВт</td>
+    <td class="smile_neutral">&nbsp;</td>
+    <td>0.3 кВт</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>ПВУ с осушителем (тепл. насосом)</td>
+    <td>700 м&sup3;/ч</td>
+    <td>160 м&sup3;/ч</td>
+    <td>1.2 кВт</td>
+    <td>180 м&sup3;/ч</td>
+    <td>23°С/57%</td>
+    <td>2.3 кВт</td>
+    <td class="smile_fine">&nbsp;</td>
+    <td>0.3 кВт</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>ПВУ с осушителем  (тепл. насосом) и рекуператором</td>
+    <td>700 м&sup3;/ч</td>
+    <td>160 м&sup3;/ч</td>
+    <td>1.2 кВт</td>
+    <td>180 м&sup3;/ч</td>
+    <td>13°С/90%</td>
+    <td>1.4 кВт</td>
+    <td class="smile_fine">&nbsp;</td>
+    <td>0.3 кВт</td>
+  </tr>
+</table>
+
+<h3>Практические рекомендации</h3>
+
+		<DIV class=bfeatt>
+<img calss="smico" src="./tmp/img/pool_1000_dh.jpg" border="0" width="320" height="269"  alt="Приточно-вытяжная установка Breezart с тепловым насосом" title="Приточно-вытяжная установка Breezart с тепловым насосом"><br>
+Приточно-вытяжная установка <br>с тепловым насосом (осушителем воздуха)
+		</div>
+
+<p>Для вентиляции помещений бассейна применяют как специализированное оборудование, так и&nbsp;обычные <nobr>приточно-вытяжные</nobr> установки. Во&nbsp;втором случае удается заметно снизить стоимость системы, но&nbsp;эксплуатировать бассейн без осушителя воздуха рискованно, поскольку выпавший конденсат может повредить отделку помещения.</p>
+<p>Недорогую систему можно собрать по&nbsp;варианту &#8470;2: приточная установка + камера смешения, вытяжная установки и, опционально, автономный осушитель воздуха. Эту систему можно устанавливать поэтапно: сначала смонтировать систему вентиляции, а&nbsp;потом, уже после начала эксплуатации, решить, нужен&nbsp;ли осушитель. Приточная установка может быть любой, но&nbsp;лучше использовать модель со&nbsp;встроенной камерой смешения и&nbsp;регулируемым подмесом наружного воздуха, например, <strong>Breezart Pool Mix</strong>. Выбор автономного осушителя не&nbsp;представляет труда, среди популярных марок можно выделить <strong>DanVex</strong>, <strong>Dantherm</strong>, <strong>Cotes</strong>, <strong>Microwell</strong>.</p>
+<p>Если&nbsp;же вы&nbsp;твердо решили использовать осушитель воздуха, то&nbsp;вместо предыдущего решения лучше выбрать вариант &#8470;3 на&nbsp;базе канального осушителя&nbsp;&mdash; это уже будет специализированная модель с&nbsp;подмесом наружного воздуха, предназначенная для применения в&nbsp;помещениях бассейна. Канальные осушители для бассейнов выпускают <strong>Dantherm</strong> (серия CDP), <strong>Calorex</strong> (серия Variheat), <strong>Breezart</strong> (серия Pool DH), <strong>Aerial</strong> и&nbsp;другие.</p>
+<p>Максимальной функциональностью и&nbsp;низким энергопотреблением отличается техническое решение, описанное в&nbsp;варианте &#8470;5: ПВУ с&nbsp;осушителем / тепловым насосом и&nbsp;рекуператором. Однако и&nbsp;стоимость такой ПВУ будет <nobr>в&nbsp;2&ndash;3</nobr> раза выше стоимости канального осушителя. Подобное оборудование предлагают <strong>Menerga</strong> (серия ThermoCond), <strong>Dantherm</strong> (серия DanX), <strong>Frivent</strong> (серия AquaVent), <strong>Breezart</strong> (серия Pool Pro) и&nbsp;другие.</p>
+
+
+<a name="cons"></a>
+<h2>Консультации и помощь в подборе оборудования</h2>
+
+<p style="margin-bottom: 5px;">Вы&nbsp;можете бесплатно проконсультироваться у&nbsp;наших специалистов по&nbsp;телефону <b><nobr>+7 (495) 223-49-59</nobr></b> или в&nbsp;<a href="firm_cnt.htm#office">офисе</a> <nobr>(м. Щелковская)</nobr> для выбора оптимального технического решения в&nbsp;рамках заданного бюджета. Также возможна платная консультация на&nbsp;объекте (3&ndash;5 т.р.) для привязки к&nbsp;плану мест размещения оборудования, коммуникаций и&nbsp;распределителей воздуха. Перед консультацией, пожалуйста, подготовьте:
+<ul style="margin-top: 5px;">
+<li>Поэтажный план помещения бассейна и&nbsp;прилегающих помещений с&nbsp;указанием размеров чаши бассейна, высоты потолков помещения, площади и&nbsp;типа остекления.</li>
+<li>Тип перелива бассейна: скиммер или лоток перелива.</li>
+<li>Типы водных аттракционов (если есть).</li>
+<li>Режим использования бассейна и&nbsp;количество посетителей.</li>
+<li>Располагаемая мощность и&nbsp;тип теплоснабжения вентустановки (электроэнергия или горячая вода). Если теплоснабжение производится горячей водой, то&nbsp;указать температуру &laquo;прямой&raquo; и&nbsp;&laquo;обратной&raquo; воды, а&nbsp;также наличие отдельного насоса в&nbsp;контуре вентиляционной установки.</li>
+</ul>
+ </p>
+
+	<br>
+<p>
+<table cellpadding="0" id="t2" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td width="40%" align="left">
+		 		<br><img src="../img/li1_left.gif" width="5" height="7">
+					<a href="vent_mono.htm">Вентиляция квартир и коттеджей</a>
+		</td>
+		<td width="20%" align="center">
+				<img src="../img/li1_up1.gif" alt="" width="7" height="5" border="0" style="margin-top: 10px;"><br>
+		 		<a href="#top">Наверх</a>
+		</td>
+		<td width="40%" align="right">
+		 		<br><a href="vent_vav.htm">VAV-системы</a>
+					<img src="../img/li1_right.gif" width="5" height="7">
+		</td>
+	</tr>
+</table>
+</p>
+
+
+</span>
+
+
+   </td>
+   <td id="cRight"></td>
+</tr>
+</table>
+
+</body>
+</html>

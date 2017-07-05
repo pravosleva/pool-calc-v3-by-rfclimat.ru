@@ -1,0 +1,291 @@
+#Calc {
+   min-width: 760px;
+   max-width: 1000px;
+}
+
+.wrap-blk {
+	width: 100%;
+	float: left;
+	margin: 0 0 10px 0;
+}
+
+.wrap-blk-close {
+   display: none;
+}
+
+.wrap-hdr {
+   float: left;
+   margin: 10px 0 10px 0;
+   padding-right: 14px;
+   background: url('../img/wopen2.gif') 100% 50% no-repeat;
+   border-bottom: 1px dashed;
+   cursor: pointer;
+}
+
+.wrap-hdr-close {
+   background: url('../img/wopen1.gif') 100% 50% no-repeat;	
+}
+
+.wrap-hdr-blk {
+   float: left;
+   margin: 10px 0 10px 0;
+   padding-right: 14px;
+   background: url('../img/wopen_blk2.gif') 100% 50% no-repeat;
+   border-bottom: 1px dashed;
+   cursor: pointer;
+}
+
+.wrap-hdr-blk-close {
+   background: url('../img/wopen_blk1.gif') 100% 50% no-repeat;	
+}
+
+.calc-group {
+	float: left;
+	width: 47%;
+	margin: 0;
+	padding: 0 0 0 2%;
+	border: 1px solid #FFFFFF;   
+}
+
+.calc-group-brd {
+	float: left;
+	width: 45%;
+	margin: 0 0 16px 2%;   
+	padding: 0 0 0 2%;
+	border: 1px dashed #DDDDDD;
+}
+
+.calc-group-hdr {
+   margin: 9px 0 7px 0;	/* Заголовки уровня 3 */
+	font-weight: Bold;
+	font-size: 100%;
+	color: #555555;
+}
+
+.calc-group-hdr-green {
+   margin: 9px 0 9px 0;	/* green hdr */
+	font-weight: Bold;
+	font-size: 110%;
+	color: #669900;
+}
+
+.calc-group-hdr label {
+	padding-left: 12px;
+}
+
+.calc-group-hdr label input {
+	vertical-align: top;
+	margin: 1px 0 0 0;
+}
+
+.calc-group-hdr label span {
+	padding-left: 6px;
+	line-height: 100%;
+}
+
+.calc-group dl {
+	clear: both;
+	display: inline-block;
+	width: 98%;
+	margin: 0 0 7px 0;  /* расстояние между параметрами */
+	padding: 0;
+	line-height: 110%;
+	font-size: 90%;
+}
+
+.calc-group dl dt {
+	float: left;
+	display: inline-block;
+	margin: 0 2% 0 5%;
+	padding: 0;
+	width: 72%;
+}
+
+.calc-group dl dd {
+	margin: 0;
+    padding: 0;
+	display: inline-block;
+	width: 19%;
+}
+
+.textinput {
+	padding-left: 5px !important;
+}
+
+.calc-group dl.calc-dl-hdr {
+	margin: 10px 0 16px 0;
+	font-weight: Bold;
+	line-height: 130%;
+	width: 92%;
+}
+
+.calc-group dl.calc-dl-hdr dd {
+	margin-left: 0;
+	font-weight: Bold;
+	width: 27%;
+}
+
+.calc-group dl.calc-dl-bg {
+	background-color: #F8F8F8;
+	padding: 10px 0 10px 0; /* размеры фона результатов */
+	margin: 6px 0 12px 0;  /* поля фона результатов */
+	font-weight: Bold;
+	line-height: 130%;
+    width: 100%;
+}
+
+.calc-group dl.calc-dl-bg dt {
+   width: 71%;						
+}
+
+.calc-group-brd dl.calc-dl-bg {
+   width: 96%;
+}
+
+.calc-group-brd dl.calc-dl-bg dt {
+   width: 73%;
+}
+
+.calc-group dl.calc-dl-bg dd {
+	width: 16%;					/* результат */
+}
+
+.calc-group dl.calc-dl-bg dd.ColorGreen, dd.ColorGreen {
+	color:#669900 !important; 
+	font-weight:bold !important; 
+	font-size:110% !important;
+	white-space: nowrap;
+}
+
+.calc-group dl dd input, .calc-group dl dd select {
+	margin: 0px;
+}
+
+.calc-group fieldset {
+	width: 93%;
+	margin: 5px 0 12px 0;	    /* поля до и после рамки */
+	border: 1px solid #CCCCCC;
+	padding: 3px 2% 7px 4%;  /* поля внутри рамки */
+	font-size: 90%;
+}
+
+.calc-group ul  {
+	margin: 0 !important;
+	padding: 0 !important;
+	list-style: none;
+}
+
+.calc-group ul li {
+	background: none !important;
+	list-style: none !important;	
+	margin: 0 !important;
+	padding: 1px 0 1px 0px !important;
+}
+
+.calc-group label  {
+	cursor: pointer;
+}
+
+.calc-group-one dl dt {
+   width:90%;   
+}
+
+.calc-group-one dl dd {
+   width:1%;  
+}
+
+.calc-fieldset label  {
+	padding-left: 4px;
+}
+
+.calc-group input, .calc-group select {
+	font-size: 90%;
+}
+
+.calc-group input[type=text] {
+	padding: 0 2px 1px 5px;
+}
+
+.calc-group select {
+	padding: 0 2px 1px 2px;
+}
+	
+.calc-group input[type=radio] {
+	cursor: pointer;
+}
+
+.calc-group-title {           /* комментарии для расчета */
+   width: 92%;
+   margin: 0 5% 12px 2%;
+   font-style: italic;
+}
+
+.calc-group-bg {
+	width: 92%;
+   background-color: #F8F8F8;
+   margin: 0 5% 12px 2%;
+   padding-right: 2%;
+}
+
+.calc-group-bg dl {
+   margin: 0 0 12px 0;
+   padding: 0;
+}
+
+.calc-group-bg dl dt {
+   margin: 0 2% 0 0;
+   padding: 0;
+   width: 305px;
+}
+
+.calc-div-bg {
+	background-color: #F5FBFC;
+	padding: 10px 3% 10px 5%;
+	margin: 0 0 16px 0;
+   font-size: 90%;
+	font-weight: Bold;
+	line-height: 130%;
+}
+
+#calc-L1 {
+   margin-bottom: 0;
+}
+
+.calc-monthly {
+   border-collapse: collapse;
+	border-top: 1px dashed #DDDDDD;
+	border-bottom: 1px dashed #DDDDDD;
+   margin: 3px 0 9px 0;
+   width: 100%;
+}
+
+.calc-monthly thead th, .calc-monthly thead td {
+   color: #777777;
+   padding-top: 9px;
+}
+
+.calc-monthly thead td {
+   color: #777777;
+}
+   
+.calc-monthly th {
+	width: 18%;
+   padding: 5px 0 5px 2%;   
+	vertical-align: middle;
+	text-align: left;	
+	white-space: nowrap;
+   font-size: 80%;
+}
+
+.calc-monthly tbody th, .calc-monthly tbody td {
+   padding-bottom: 9px;
+}
+
+.calc-monthly td {
+	width: 9%;
+	vertical-align: middle;
+	text-align: center;
+   font-size: 80%;
+   padding: 5px 0 5px 0;   
+}
+

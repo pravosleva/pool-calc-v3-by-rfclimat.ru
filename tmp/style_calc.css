@@ -1,0 +1,308 @@
+#tcalc, tcalc_slim {
+   border:none;    
+   margin:20px 0px 20px 0px;
+}
+
+#tcalc td {
+   padding:0px 5px 5px 0px;
+   text-align: left;
+   vertical-align:middle;
+   font-size:80%;
+   line-height:120%;
+   color:#555555;   
+}
+
+#tcalc td span {
+   font-weight:Bold;
+}
+
+#tcalc td.res {
+   	padding-left: 12px;  
+   	border-bottom-color: #E0E0E0; 
+	border-bottom-style: solid; 
+	border-bottom-width: thin; 
+	border-bottom-width: 1px;
+	white-space: nowrap;
+	padding-top: 5px;
+}
+
+#tcalc td.hdr3 {
+	font-size:90%; 
+	vertical-align : middle; 
+	text-align: left;
+	border-top-color: #E0E0E0; 
+	border-top-style: solid; 
+	border-top-width: thin; 
+	border-top-width: 1px;
+
+}
+
+#tcalc td.hdr3 H3 {
+	margin-top: 10px!important; 
+	margin-bottom: 5px!important;
+}
+/*
+	border-bottom-color: #E0E0E0; 
+	border-bottom-style: solid; 
+	border-bottom-width: thin; 
+	border-bottom-width: 1px;
+	margin-bottom: 12px;
+	
+	border-bottom-color: #E0E0E0; 
+    	border-bottom-style: solid; 
+    	border-bottom-width: thin; 
+    	border-bottom-width: 1px;
+*/
+
+#tcalc td.line {
+	font-size:5%; 
+	border-top-color: #E0E0E0; 
+	border-top-style: solid; 
+	border-top-width: thin; 
+	border-top-width: 1px;
+}
+
+#tcalc td.hdr4 {
+	font-weight:Bold;
+    	text-align: left; 
+    	padding-left: 18px; 
+    	padding-top:7px;
+    	border-top-color: #E0E0E0; 
+    	border-top-style: solid; 
+    	border-top-width: thin; 
+    	border-top-width: 1px;  
+		color:#696969;     	
+}
+
+
+#tcalc_slim td {
+   padding:0px 5px 3px 0px;
+   text-align: left;
+   vertical-align:middle;
+   font-size:80%;
+   line-height:120%;
+   color:#555555;
+   
+   /*  border:1px solid #F0F0F0;   */
+   
+}
+
+
+
+#tcalc_slim td#lft {
+  	text-align: left; 
+}
+
+#tcalc_slim td#rgt {
+  	text-align: right; 
+}
+
+#tcalc_slim td.Form_Name {
+	padding-left: 12px;
+	padding-right: 5px;
+	white-space: nowrap;
+	padding-top: 5px !important;
+	padding-bottom: 5px !important;
+	/*height:15px;*/
+}
+
+#tcalc_slim td.Form_Field {
+	font-size:90%;	
+	white-space: nowrap;
+}
+#tcalc_slim td.Form_Res {
+	font-size:90%;	
+	white-space: nowrap;
+}
+#tcalc_slim td.Form_Field span, #tcalc_slim td.Form_Res span {
+	padding-left: 0px;
+	white-space: nowrap;	
+}
+
+#tcalc_slim td.Form_NamePr {
+	border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-left-width: 1px;
+	padding-left: 12px;
+	white-space: nowrap;
+}
+#tcalc_slim td.Form_FieldPr {
+	border-right-color: #E0E0E0; 
+	border-right-style: solid; 
+	border-right-width: thin; 
+	border-right-width: 1px;
+	font-size:90%;
+}
+#tcalc_slim td.Form_ResPr {
+	border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-right-width: 1px;
+	padding-right: 5px;
+	white-space: nowrap;
+}
+
+#tcalc_slim td.Form_Hdr, #tcalc_slim td.Form_HdrPr {
+	padding-left: 12px;
+	padding-top: 7px; 
+	padding-bottom: 7px;
+	font-size:90%;
+    font-weight:Bold;
+    color:#696969;
+}
+
+#tcalc_slim td.Form_Inp1 {
+	padding-left: 12px;
+	padding-top: 7px; 
+	padding-bottom: 7px;
+	font-size:90%;
+    font-weight:Bold;
+    color:#669900;
+}
+
+#tcalc_slim td.Form_Inp2 {
+	padding-left: 0px;
+	padding-top: 7px; 
+	padding-bottom: 7px;
+	font-size:90%;
+    font-weight:Bold;
+    color:#669900;
+}
+
+#tcalc_slim td.Form_HdrPr {
+	border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-right-width: 1px;
+	border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-left-width: 1px;
+}
+
+#tcalc_slim td.Form_Err {
+	padding-left: 12px;
+	padding-top: 7px;
+	color:#FF9B00; 
+	font-size:90%;
+	vertical-align:top;
+}
+
+input:enabled, select:enabled {
+	background:#F9F9F9;
+	color:#555555;
+}
+input:disabled, select:disabled {
+	background:#F3F3F3;
+	color:#999999;
+}
+
+input, select  {
+	border-style: solid; border-width: thin;
+	border-right-color: #D0D0D0;  border-right-width: 1px;
+	border-bottom-color: #D0D0D0;  border-bottom-width: 1px;
+	border-top-color: #777777; border-top-width: 1px;
+	border-left-color: #777777; border-left-width: 1px;
+	vertical-align:middle;
+    font-size:100%;
+    color:#555555;
+	padding: 1px 0px 1px 2px;	
+	background-color: #F9F9F9;
+}
+
+.digit_dec, .digit_int {
+	margin: 0px 5px 0px 2px;	
+	padding-left: 5px;
+}
+
+/**********************/
+
+tcalc td#left_top {
+   padding:0px 10px 10px 0px;
+   text-align: left;
+   vertical-align:top;
+   font-size:80%;
+   line-height:120%;
+   color:#555555;
+}
+
+
+tcalc ul {
+   margin: 5px 0px 0px 20px;
+   padding:0px;
+   line-height:130%;
+   list-style:none;
+}
+
+tcalc li {
+   padding:0px 8px 4px 15px;
+   background: url('../img/li2.gif') no-repeat 2px 6px;
+   margin:0px;
+}
+
+tcalc_mini {
+   border:none;    
+   margin:0px 0px 0px 0px;
+}
+
+#tcalc_mini td {
+   padding:0px 0px 0px 0px;
+   vertical-align:bottom;
+   font-size:100%;
+   line-height:120%;
+   color:#555555;   
+}
+
+/* tcalc_int */
+#tcalc_int {
+   border:none;    
+   margin:0px 0px 0px 0px;
+   padding:0px 0px 0px 0px;
+}
+
+#tcalc_int td {
+	padding:2px 5px 2px 0px;
+	font-size:80%;
+    line-height:120%;
+    color:#555555;	
+	text-align: left;
+	vertical-align:middle;
+	border-collapse:collapse;
+}
+
+#tcalc_int td.name {
+	width: 44%;
+    text-align: left; 
+    padding-left: 15px;      	
+}
+
+#tcalc_int td.r, #tcalc_int td.re {   	
+	width: 7%;
+	text-align: right;
+	/*font-weight:Bold;	*/
+}
+#tcalc_int td.r {   	
+	border-right-color: #E0E0E0; 
+	border-right-style: solid; 
+	border-right-width: thin; 
+	border-right-width: 1px;
+}
+
+#tcalc_int td.hdr {
+	font-weight:Bold;
+    text-align: left; 
+    padding-left: 0px; 
+    padding-top:7px;    
+	color:#696969;	 	
+}
+#tcalc_int td.result {
+	font-weight:Bold;
+	color:#696969;	 	
+}
+#tcalc_int td.resnum {
+	font-weight:Bold;
+	color:#696969;	
+	text-align: right; 	
+}
+
+#tcalc_int td.spc {
+	font-size:10%;     	
+}
+
+#tcalc_int td.line {
+	font-size:5%; 
+	border-bottom-color: #E0E0E0; 
+	border-bottom-style: solid; 
+	border-bottom-width: thin; 
+	border-bottom-width: 1px;  
+	padding:0px 0px 0px 0px;  	
+}
